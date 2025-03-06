@@ -121,9 +121,10 @@ Acc_Loss_Plot(TA[0], TA[1], TL[0], TL[1], VA[0], VA[1], VL[0], VL[1])
 
 ![image](https://github.com/user-attachments/assets/93d04e73-e2d4-4dd4-a3df-40951cf5163b)
 
-#Save Model
+Dari hasil grafik yang ditampilkan, model **Toxic Comment Classification menggunakan PyTorch** menunjukkan tren pembelajaran yang cukup baik, meskipun masih terdapat fluktuasi pada beberapa metrik. Pada grafik pertama dan kedua, terlihat bahwa metrik seperti loss atau akurasi masih tidak stabil, terutama pada epoch awal, yang bisa mengindikasikan model masih beradaptasi dengan data. Grafik ketiga menunjukkan bahwa akurasi atau F1-score model meningkat secara signifikan, yang berarti model mulai memahami pola dalam data. Sementara itu, grafik terakhir menunjukkan penurunan loss yang cukup baik, mengindikasikan bahwa model berhasil belajar. Namun, perlu dipastikan bahwa validation loss juga menurun agar model tidak mengalami overfitting. Regularisasi seperti **Dropout** atau **Early Stopping** dapat digunakan untuk meningkatkan stabilitas dan generalisasi model.
+
+# Save Model
 ```
-# Saving model
 torch.save(Distil_bert,"dsbert_toxic_balanced.pt")
 ```
 
